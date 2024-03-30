@@ -1,4 +1,5 @@
 #:kivy 2.3.0
+#:import host_info desk_clock.host_info.host_info
 
 <Calendar>:
     orientation: 'vertical'
@@ -57,3 +58,10 @@
 
     Calendar:
         id: calendar_widget
+
+    Label:
+        size_hint: (1, 0.20)
+        text_size: (self.size[0] - 50, self.size[1])
+        halign: 'left'
+        font_size: 30
+        text: host_info()
