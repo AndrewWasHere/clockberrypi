@@ -1,5 +1,30 @@
 #:kivy 2.3.0
 
+<Calendar>:
+    orientation: 'vertical'
+    Label:
+        font_name: 'DejaVuSansMono.ttf'
+        font_size: 40
+        text: str(root.cal)
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, 0.25)
+        Button:
+            id: prev_button
+            font_size: 40
+            text: '<'
+            on_release: root.previous()
+        Button:
+            id: current_button
+            font_size: 40
+            text: 'today'
+            on_release: root.today()
+        Button:
+            id: next_button
+            font_size: 40
+            text: '>'
+            on_release: root.next()
+
 <Chronometer>:
     orientation: 'vertical'
     padding: [0, -40, 0, -40]
@@ -16,9 +41,14 @@
         text: str(root.date)
 
 <DeskClock>:
+    cols: 2
     chronometer: chronometer_widget
+    calendar: calendar_widget
 
     Chronometer:
         id: chronometer_widget
         center_x: root.center_x
         center_y: root.center_y
+
+    Calendar:
+        id: calendar_widget
