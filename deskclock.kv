@@ -27,18 +27,23 @@
 
 <Chronometer>:
     orientation: 'vertical'
-    padding: [0, -40, 0, -40]
     Label:
-        font_size: 70
-        text: str(root.time)
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            font_size: 150
+            text: str(root.time)
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                font_size: 50
+                size: self.texture_size
+                text: str(root.day)
+            Label:
+                font_size: 50
+                size: self.texture_size
+                text: str(root.date)
     Label:
-        font_size: 40
-        size: self.texture_size
-        text: str(root.day)
-    Label:
-        font_size: 40
-        size: self.texture_size
-        text: str(root.date)
 
 <DeskClock>:
     cols: 2
