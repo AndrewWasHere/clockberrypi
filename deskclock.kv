@@ -1,6 +1,7 @@
 #:kivy 2.3.0
 #:import host_info desk_clock.host_info.host_info
-#:set defaultcolor '#b37700'
+#:set textcolor '#b37700'
+#:set buttoncolor '#003311'
 
 <Calendar>:
     orientation: 'vertical'
@@ -8,7 +9,7 @@
         font_name: 'DejaVuSansMono.ttf'
         font_size: 25
         text: str(root.cal)
-        color: defaultcolor
+        color: textcolor
     BoxLayout:
         orientation: 'horizontal'
         size_hint: (1, 0.25)
@@ -16,19 +17,22 @@
             id: prev_button
             font_size: 20
             text: '<'
-            color: defaultcolor
+            color: textcolor
+            background_color: buttoncolor
             on_release: root.previous()
         Button:
             id: current_button
             font_size: 20
             text: 'today'
-            color: defaultcolor
+            color: textcolor
+            background_color: buttoncolor
             on_release: root.today()
         Button:
             id: next_button
             font_size: 20
             text: '>'
-            color: defaultcolor
+            color: textcolor
+            background_color: buttoncolor
             on_release: root.next()
 
 <Chronometer>:
@@ -39,19 +43,19 @@
         Label:
             font_size: 80
             text: str(root.time)
-            color: defaultcolor
+            color: textcolor
         BoxLayout:
             orientation: 'vertical'
             Label:
                 font_size: 30
                 size: self.texture_size
                 text: str(root.day)
-                color: defaultcolor
+                color: textcolor
             Label:
                 font_size: 30
                 size: self.texture_size
                 text: str(root.date)
-                color: defaultcolor
+                color: textcolor
     Label:
 
 <DeskClock>:
@@ -72,7 +76,7 @@
             valigh: 'bottom'
             font_size: 15
             text: host_info()
-            color: defaultcolor
+            color: textcolor
 
     Calendar:
         id: calendar_widget
