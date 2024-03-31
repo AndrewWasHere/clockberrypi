@@ -3,7 +3,7 @@ Description=Clockberrypi Desk Clock
 After=network.target
 
 [Service]
-type=oneshot
+type=simple
 ExecStart=/usr/bin/bash /home/pi/clockberrypi/deskclock
 
 [Install]
