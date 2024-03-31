@@ -1,0 +1,10 @@
+[Unit]
+Description=Clockberrypi Desk Clock
+After=network.target
+
+[Service]
+type=oneshot
+ExecStart=/usr/bin/bash /home/pi/clockberrypi/deskclock
+
+[Install]
+WantedBy=default.target

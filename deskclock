@@ -1,6 +1,12 @@
 #! /bin/bash
-# Convenience script to get around "MESA-LOADER: failed to open iris" error
-# seen on some OSes (e.g. Ubuntu 22.04 (Jammy Jellyfish)).
+# Clockberry Pi Desk Clock launch script.
 
-export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-python deskclock.py -- --show-cursor
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Uncomment to get around "MESA-LOADER: failed to open iris" error
+# seen on some OSes (e.g. Ubuntu 22.04 (Jammy Jellyfish)).
+# export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+# Uncomment the script arguments to show the mouse cursor over the desk clock.
+# Good for non-touchscreens.
+python ${SCRIPT_DIR}/deskclock.py # -- --show-cursor
