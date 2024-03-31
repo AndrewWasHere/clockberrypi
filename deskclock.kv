@@ -5,24 +5,24 @@
     orientation: 'vertical'
     Label:
         font_name: 'DejaVuSansMono.ttf'
-        font_size: 40
+        font_size: 25
         text: str(root.cal)
     BoxLayout:
         orientation: 'horizontal'
         size_hint: (1, 0.25)
         Button:
             id: prev_button
-            font_size: 40
+            font_size: 20
             text: '<'
             on_release: root.previous()
         Button:
             id: current_button
-            font_size: 40
+            font_size: 20
             text: 'today'
             on_release: root.today()
         Button:
             id: next_button
-            font_size: 40
+            font_size: 20
             text: '>'
             on_release: root.next()
 
@@ -32,16 +32,16 @@
     BoxLayout:
         orientation: 'vertical'
         Label:
-            font_size: 150
+            font_size: 80
             text: str(root.time)
         BoxLayout:
             orientation: 'vertical'
             Label:
-                font_size: 50
+                font_size: 30
                 size: self.texture_size
                 text: str(root.day)
             Label:
-                font_size: 50
+                font_size: 30
                 size: self.texture_size
                 text: str(root.date)
     Label:
@@ -63,5 +63,5 @@
         size_hint: (1, 0.20)
         text_size: (self.size[0] - 50, self.size[1])
         halign: 'left'
-        font_size: 30
+        font_size: 15
         text: host_info()

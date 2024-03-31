@@ -1,6 +1,6 @@
 # DeskClock
 
-Raspberry Pi Model 2B + Touch Screen turned into a desktop clock and
+Raspberry Pi Model 3B + Touch Screen turned into a desktop clock and
 lightweight server endpoint for development. Or, run it as a window
 on your computer.
 
@@ -26,6 +26,9 @@ sudo ./rpi-os-lite-installs.sh
 ```
 
 ## "MESA-LOADER: failed to open iris" Error
+
+You don't need this on a Raspberry Pi. But you may on an Intel
+Ubuntu box.
 
 ```shell
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
