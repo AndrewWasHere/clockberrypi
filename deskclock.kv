@@ -1,5 +1,6 @@
 #:kivy 2.3.0
 #:import host_info desk_clock.host_info.host_info
+#:set defaultcolor '#b37700'
 
 <Calendar>:
     orientation: 'vertical'
@@ -7,6 +8,7 @@
         font_name: 'DejaVuSansMono.ttf'
         font_size: 25
         text: str(root.cal)
+        color: defaultcolor
     BoxLayout:
         orientation: 'horizontal'
         size_hint: (1, 0.25)
@@ -14,16 +16,19 @@
             id: prev_button
             font_size: 20
             text: '<'
+            color: defaultcolor
             on_release: root.previous()
         Button:
             id: current_button
             font_size: 20
             text: 'today'
+            color: defaultcolor
             on_release: root.today()
         Button:
             id: next_button
             font_size: 20
             text: '>'
+            color: defaultcolor
             on_release: root.next()
 
 <Chronometer>:
@@ -34,16 +39,19 @@
         Label:
             font_size: 80
             text: str(root.time)
+            color: defaultcolor
         BoxLayout:
             orientation: 'vertical'
             Label:
                 font_size: 30
                 size: self.texture_size
                 text: str(root.day)
+                color: defaultcolor
             Label:
                 font_size: 30
                 size: self.texture_size
                 text: str(root.date)
+                color: defaultcolor
     Label:
 
 <DeskClock>:
@@ -58,11 +66,13 @@
             center_x: root.center_x
             center_y: root.center_y
         Label:
-            size_hint: (1, 0.20)
+            size_hint: (1, 0.30)
             text_size: (self.size[0] - 50, self.size[1])
             halign: 'left'
+            valigh: 'bottom'
             font_size: 15
             text: host_info()
-            
+            color: defaultcolor
+
     Calendar:
         id: calendar_widget

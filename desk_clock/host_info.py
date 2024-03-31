@@ -9,7 +9,9 @@ def host_info():
     other_info = get_other_info()
 
     return (
-        f'hostname: {hostname} || IPv4: {ipv4} || IPv6: {ipv6}\n'
+        f'hostname: {hostname}\n'
+        f'IPv4: {ipv4}\n'
+        f'IPv6: {ipv6}\n'
         f'SSID: {ssid}'
         f'{other_info}'
     )
