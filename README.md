@@ -3,6 +3,12 @@
 Raspberry Pi Model 3B + Touch Screen turned into a desktop clock. 
 Or, run it as a window on your computer.
 
+![Desk Clock screenshot](deskclock-screenshot.jpg)
+
+Colors are off in the above picture, and it's not actually a blue background. 
+That's just an artifact of the picture I didn't take the time to fix in 
+post-processing.
+
 ## Python Packages
 
 If you're not running this on a dedicated device, you will probably want a
