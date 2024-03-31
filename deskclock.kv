@@ -51,17 +51,18 @@
     chronometer: chronometer_widget
     calendar: calendar_widget
 
-    Chronometer:
-        id: chronometer_widget
-        center_x: root.center_x
-        center_y: root.center_y
-
+    BoxLayout:
+        orientation: 'vertical'
+        Chronometer:
+            id: chronometer_widget
+            center_x: root.center_x
+            center_y: root.center_y
+        Label:
+            size_hint: (1, 0.20)
+            text_size: (self.size[0] - 50, self.size[1])
+            halign: 'left'
+            font_size: 15
+            text: host_info()
+            
     Calendar:
         id: calendar_widget
-
-    Label:
-        size_hint: (1, 0.20)
-        text_size: (self.size[0] - 50, self.size[1])
-        halign: 'left'
-        font_size: 15
-        text: host_info()
